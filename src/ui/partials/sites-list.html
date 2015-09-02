@@ -1,0 +1,77 @@
+
+<div class="row">
+	<div class="large-8 columns">
+		<table>
+			<caption>Sites</caption>
+			<thead>
+		    <tr>
+		      <th>Name</th>
+		      <th>Url</th>
+					<th>Last crawled</th>
+					<th><a ui-sref="admin.sites.create" class="user-action"><i class="fi-plus"></i></a></th>
+		    </tr>
+		  </thead>
+		  <tbody>
+		    <tr ng-repeat="site in sites">
+			    <td>
+			      <a ui-sref="admin.sites.detail({ siteName : site.name })" title="detail" class="user-action">
+			      	{{site.name}}
+			      </a>
+			    </td>
+			    <td>
+      			{{site.url}}
+	      		<a href="{{site.url}}" target="_blank">
+		      		<i class="fi-eye"></i>
+	      		</a>
+	      	</td>
+					<td>
+						{{site.lastCrawled}}
+					</td>
+			    <td>
+			      <a ui-sref="admin.sites.detail({ siteName : site.name })" title="detail" class="user-action">
+			      	<i class="fi-pencil"></i>
+			      </a>
+			    </td>
+		    </tr>
+		  </tbody>
+		</table>
+	</div>
+
+	<div class="large-4 columns">
+		<table>
+			<caption>
+				Jobs
+
+				<span class="right">
+					<a
+						ng-click="loadJobs()" >
+						<i class="fi-refresh">	</i> Load
+					</a>
+					&nbsp;
+					<a
+						ng-click="unloadJobs()" >
+						<i class="fi-trash">	</i> Unload
+					</a>
+
+				</span>
+			</caption>
+			<thead>
+				<tr>
+					<th>Site</th>
+					<th>Cron Scheduling</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="job in jobs">
+					<td>
+						{{job.siteName}}
+					</td>
+					<td>
+						{{job.cronExpression}}
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+</div>
