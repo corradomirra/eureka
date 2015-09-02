@@ -1,14 +1,17 @@
 {
-  "name": "search-crawler",
-  "description": "search-crawler experimental app",
+  "name": "eureka",
+  "description": "eureka experimental app",
   "version": "1.0.0",
-  "homepage": "https://github.com/davideicardi/search-crawler",
+  "homepage": "https://github.com/corradomirra/eureka",
   "author": {
-    "name": "Davide Icardi",
-    "email": "davide.icardi@gmail.com"
+    "name": "Corrado Mirra",
+    "email": "corradomirra@yahoo.com"
   },
   "keywords": [
+  	"eureka",
+  	"web",
     "search",
+    "search engine",
     "crawler"
   ],
   "main":"./index.js",

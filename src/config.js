@@ -30,15 +30,15 @@ config.crawler.acceptCookies = false;
 // mongo host and database (mongodb version => 2.6 required)
 config.db.mongo = {};
 config.db.mongo.ip = process.env.IP || "localhost";
-config.db.mongo.url = "mongodb://" + config.db.mongo.ip + ":27017/search-crawler";
-
+config.db.mongo.auth = "admin:lfiqhCTRSdMw@";
+config.db.mongo.url = "mongodb://" + config.db.mongo.ip + ":27017/eureka"; //search-crawler
 
 // html "jquery style" selector for the body content (es. "body", "article", "div#text")
 //  can be override on each site
 config.parser.defaultContentSelector = "body";
 
 // nodejs server listening port
-config.web.port = process.env.PORT || process.env.WEB_PORT || 8181;
+config.web.port = process.env.PORT || process.env.WEB_PORT || 8080;
 config.web.ip = process.env.IP;
 
 config.web.logRequests = false;

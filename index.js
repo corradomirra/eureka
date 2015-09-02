@@ -64,7 +64,7 @@ searchCrawler.init()
 
 		app.listen(config.web.port, config.web.ip);
 
-		console.log("search-crawler running...");
+		console.log("Eureka running...");
 })
 .fail(function(error){
 		console.error(error);
